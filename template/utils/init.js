@@ -1,15 +1,16 @@
+import welcome from 'cli-welcome'
+import pkg, {author, description, version as _version} from './../package.json'
+import updateNotifier from 'update-notifier'
 
-const welcome = require('cli-welcome');
-const pkg = require('./../package.json');
-const updateNotifier = require('update-notifier');
-
-module.exports = async () => {
-  welcome(`{{name}}`, `by ${pkg.author.url}\n${pkg.description}`, {
-    version: `v${pkg.version}`,
+const init = async () => {
+  welcome(`{{name}}`, `by ${author.url}\n${description}`, {
+    version: `v${_version}`
   })
 
   updateNotifier({
     pkg,
-    shouldNotifyInNpmScript: true,
+    shouldNotifyInNpmScript: true
   }).notify({isGlobal: true})
 }
+
+export default init

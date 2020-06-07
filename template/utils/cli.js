@@ -1,11 +1,7 @@
-const meow = require('meow')
-const chalk = require('chalk')
-const blue = chalk.blue
-const bold = chalk.bold
-const cyan = chalk.cyan
-const yellow = chalk.yellow
+import meow from 'meow'
+import {blue, bold, cyan, yellow} from 'chalk'
 
-module.exports = meow(
+export default meow(
   `
   ${bold('Usage')}
     ${blue(`{{name}}`)} ${cyan(`<input>`)} ${yellow(`[--option]`)}
@@ -24,6 +20,6 @@ module.exports = meow(
     hardRejection: false,
     inferType: false,
     input: [],
-    flags: {},
-  },
+    flags: {}
+  }
 )
