@@ -18,8 +18,7 @@
     "{{name}}": "./index.js"
   },
   "directories": {
-    "lib": "utils",
-    "test": "__tests__"
+    "lib": "utils"
   },
   "files": [
     "utils",
