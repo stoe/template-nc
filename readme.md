@@ -1,6 +1,6 @@
 # template-nc
 
-> A template for node clis.
+> A template for Node CLI apps.
 
 ## Install
 
